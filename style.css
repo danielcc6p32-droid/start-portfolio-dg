@@ -672,3 +672,65 @@ html {
     }
 
 }
+
+/* Botão para baixar currículo */
+.hero-btn-curriculo {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 24px;
+    border: 1px solid #64748b;
+    border-radius: 8px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.hero-btn-curriculo:hover {
+    border-color: #38bdf8;
+    color: #38bdf8;
+    transform: translateY(-3px);
+}
+
+.hero-btn-curriculo:focus-visible {
+    outline: 2px solid #38bdf8;
+    outline-offset: 4px;
+}
+
+/* Organização dos botões da apresentação */
+.hero-botoes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    max-width: 520px;
+    width: 100%;
+}
+
+.hero-botoes a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 14px 12px;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* Currículo ocupa a segunda linha */
+.hero-btn-curriculo {
+    grid-column: 1 / -1;
+}
+
+/* Celulares */
+@media screen and (max-width: 768px) {
+    .hero-botoes {
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+
+    .hero-btn-curriculo {
+        grid-column: auto;
+    }
+}
